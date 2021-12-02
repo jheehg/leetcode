@@ -1,7 +1,7 @@
 package addTwoNumbers;
 
 class Solution {
-	public ListNode addNode(ListNode ln1, ListNode ln2, ListNode ln, ListNode lnRst, int n, String fstYn) {
+	public ListNode addNode(ListNode ln1, ListNode ln2, ListNode ln, ListNode lnRst, int n) {
 		int sum = 0;
 		if(ln1 == null && ln2 == null) {
 			if(n==1) ln.val = 1;
@@ -14,9 +14,8 @@ class Solution {
 		if(sum > 9) n = 1;
 		else n = 0;
 		
-		if("N".equals(fstYn) || ("Y".equals(fstYn) && sum % 10 != 0)) {
-			ln.val = sum <= 9? sum : sum - 10;
-		}
+		ln.val = sum <= 9? sum : sum - 10;
+
 		
 		if(((ln1 != null && ln1.next != null) || (ln2 != null && ln2.next != null)) ||
 		  (((ln1 != null && ln1.next == null) || (ln2 != null && ln2.next == null)) && n == 1)) {
@@ -27,13 +26,12 @@ class Solution {
 					   ln2 != null? ln2.next : null,
 					   ln.next,
 					   lnRst,
-					   n,
-					   "N");
+					   n);
 	}
 	
 	public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
 		ListNode ln = new ListNode();
-		return addNode(l1, l2, ln, ln, 0, "Y");
+		return addNode(l1, l2, ln, ln, 0);
 	}
 	
 	
