@@ -2,13 +2,17 @@
  * @param {number[][]} moves
  * @return {string}
  */
+// A, B 플레이어가 tictactoe 게임을 하는데 A가 먼저 진행한다.
+// 모든 턴을 다 소모할때까지 승부가 안나면 Draw,
+// A 플레이어가 이기면 A, B 플레이어가 이기면 B, 
+// 주어진 턴으로는 누가 이겼는지 알 수 없다면 Pending을 리턴하기.
 
  var tictactoe = function(moves) {
      // 최소 A플레이어가 3턴까지는 진행해야 승부가 남.
     if(moves.length < 5) return "Pending";
       
     // 모든 라인에 대해 결과를 체크.
-    // 가로 3줄, 세로 2줄, 대각선 2줄
+    // 가로 3줄, 세로 3줄, 대각선 2줄
     const resultA = {
         C0: [0,0,0], C1: [0,0,0], C2: [0,0,0],
         R0: [0,0,0], R1: [0,0,0], R2: [0,0,0],
