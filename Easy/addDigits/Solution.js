@@ -1,3 +1,5 @@
+// 2022.07.21
+
 const sum = (arr) => {
   return arr.reduce((prev, curr) => Number(prev) + Number(curr), 0);
 };

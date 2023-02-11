@@ -1,3 +1,5 @@
+// 2022.07.14
+
 const calPoints = (ops) => {
   let result = [];
   for (let i = 0; i < ops.length; i++) {
@@ -6,11 +8,11 @@ const calPoints = (ops) => {
     if (isNum) {
       result.push(Number(ops[i]));
     } else {
-      if (ops[i] === "C") {
+      if (ops[i] === 'C') {
         result.pop();
-      } else if (ops[i] === "D") {
+      } else if (ops[i] === 'D') {
         result.push(result.at(-1) * 2);
-      } else if (ops[i] === "+") {
+      } else if (ops[i] === '+') {
         result.push(result.at(-1) + result.at(-2));
       }
     }

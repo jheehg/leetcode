@@ -1,3 +1,5 @@
+// 2022.07.21
+
 const detectCapitalUse = (word) => {
   let num = 0;
   let str = word.slice(1);

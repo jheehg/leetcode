@@ -1,3 +1,5 @@
+// 2021.03.16
+
 class Solution {
     public int[] findErrorNums(int[] nums) {
         // 모든 정수를 다 더한 합 (정상적인 경우)

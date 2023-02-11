@@ -8,18 +8,19 @@
 // i != j,
 // 0 <= i,j < arr.length
 
+// 2022.02.07
+
 // Example.
 // Input) arr = [10,2,5,3]
 // Output) true
 // 10 = 2 * 5
 
-var checkIfExist = function(arr) {
-    for(let i = 0; i < arr.length; i++) {
-        let findNum = arr.indexOf(arr[i] * 2);
-        // arr[i] * 2 되는 요소가 있는지 찾되 자기자신은 제외.
-        if(findNum > -1 && findNum !== i) return true;    
-    }
+var checkIfExist = function (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    let findNum = arr.indexOf(arr[i] * 2);
+    // arr[i] * 2 되는 요소가 있는지 찾되 자기자신은 제외.
+    if (findNum > -1 && findNum !== i) return true;
+  }
 
-    return false;
+  return false;
 };
-
